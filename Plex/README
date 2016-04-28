@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////////////
+/           Pablo Navarro Guijarro                                         /
+/           Modelos de Computación. UGR. 2015                              /
+/           Práctica Lex                                                   /
+////////////////////////////////////////////////////////////////////////////
+
+Funciones del programa:
+-Buscar en un documento apariciones de los equipos y jugadores de Counter Strike
+del top 8 mundial.
+-Buscar apariciones de los torneos de mayor dimensión actualmente.
+-Realizar un recuento de las apariciones.
+-Resaltar las apariciones y borrar el resto de documento
+
+Para ejecutar el programa es necesario escribir:
+
+      flex -l buscador.l
+      g++ -o buscador lex.yy.cc -lfl
+      ./buscador "pagina_web" > "archivo_salida"

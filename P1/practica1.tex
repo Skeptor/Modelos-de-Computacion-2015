@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % para que nos acepte la codificación UTF-8
+\usepackage[spanish]{babel} % establecemos el idioma del documento al español
+
+\begin{document}
+
+\title{Relacion de ejercicios MC. Practica 1}
+\author{Pablo Navarro}
+\maketitle
+\begin{enumerate}
+  \item{}         %Ejercicio 1
+  \begin{itemize}
+    \item[a)]
+    $ S\ \rightarrow\ aS_{1}b $ \\
+    $ S_{1} \rightarrow\ aS_{1} |\ bS_{1} |\ \epsilon $\\
+    $ L = u \in <a,b,c,d>^*\ t.q.\ u\ empieza\ por\ 'a'\ y\ acaba\ por\ 'b' $
+  \item[b)]
+    $ S\ \rightarrow\ aSa |\ bSb |\ S_{1} $\\
+    $ S_{1}\ \rightarrow\ a |\ b |\ \epsilon $\\
+    $ L  = u \in <a,b,c,d>^*\ t.q.\ u\ empieza\ y\ acaba\ por\ el\ mismo\
+    símbolo,\ siendo\ este\ 'a'\ o\ 'b' $
+  \item[c)]
+    $ S\ \rightarrow\ aSb |\ aS_{1}b $ \\
+    $ S_{1}\ \rightarrow\ cS_{1}d |\ \epsilon $\\
+    $ L = u \in <a,b,c,d>^*\ t.q.\ u = a^{n}c^{m}d^{m}b^{n}\ donde\ n \geq 1\ y\ m \geq 0  $
+  \item[d)]
+    $ S\ \rightarrow\ S_{1}bbS_{1} $ \\
+    $ S_{1}\ \rightarrow\ aS_{1} |\ bS_{1} |\ \epsilon $ \\
+    $ L = u \in <a,b,c,d>^*\ t.q. \ u\ contiene\ la\ subcadena\ 'bb' $
+    \end{itemize}
+  \item{}         %Ejercicio 2
+  \begin{itemize}
+    \item[ a)] u contiene 2 o 3 'b'.
+
+    $ S\ \rightarrow\ aS |\ bS_{1} $\\
+    $ S_{1}\ \rightarrow\ aS_{1} |\ bS_{2} $\\
+    $ S_{2}\ \rightarrow\ aS_{2} |\ bS_{3}  |\ \epsilon $\\
+    $ S_{3}\ \rightarrow\ aS_{3} |\ \epsilon $\\
+
+    \item[b)] Palabras en las que el numero de b no es tres.\\
+    $ S\ \rightarrow\ aS |\ bS_{1} |\ \epsilon $\\
+    $ S_{1}\ \rightarrow\ aS_{1} |\ bS_{2} |\ \epsilon $\\
+    $ S_{2}\ \rightarrow\ aS_{2} |\ bS_{3} |\ \epsilon $\\
+    $ S_{3}\ \rightarrow\ aS_{3} |\ bS_{4} $\\
+    $ S_{4}\ \rightarrow\ aS_{4} |\ bS_{4} |\ \epsilon $
+
+    \item[c)] Palabras que no contienen la subcadena ab.\\
+    $ S\ \rightarrow\ bS |\ aS_{1} |\ \epsilon $\\
+    $ S_{1}\ \rightarrow\ aS_{1} |\ \epsilon $
+
+    \item[d)] Palabras que no contienen la subcadena baa.\\
+    $S\ \rightarrow\ aS |\ bS_{1} |\ \epsilon $\\
+    $S_{1}\ \rightarrow\ aS_{2} |\ bS_{1} |\ \epsilon $\\
+    $S_{2}\ \rightarrow\ bS_{1} |\ \epsilon $
+  \end{itemize}
+  \item{}         %Ejercicio 3
+  ¿Es regular el lenguaje formado por la siguiente gramática?\\
+  $S\ \rightarrow\ S_{1}aS_{2} $\\
+  $S_{1}\ \rightarrow\ bS_{1} |\ \epsilon $\\
+  $S_{2}\ \rightarrow\ S_{1} |\ baS_{2} |\ \epsilon $\\
+  \\
+  Respuesta:\\
+  El lenguaje generado es:\\
+  $b^{n}\ a\ (ba)^{m}\ b^{p}$\\
+  El cual es regular, pues puede ser generado por la siguiente gramática de Tipo 3:\\
+  \\
+  $S\ \rightarrow\ bS |\ aS_{1} $\\
+  $S_{1}\ \rightarrow\ bS_{2} $\\
+  $S_{2}\ \rightarrow\ aS_{1} |\ bS_{3} |\ \epsilon $\\
+  $S_{3}\ \rightarrow\ bS_{3} |\ \epsilon $\\
+\end{enumerate}
+\end{document}
+
+%Aqui se puede escribir cualquier cosa, no compilador
